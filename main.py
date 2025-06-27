@@ -26,7 +26,7 @@ def upload_to_streamtape():
     print("🚀 Uploading to StreamTape...")
 
     # Step 1: Get upload URL
-    r = requests.get(f"https://api.streamtape.com/file/ul?login=79e10358ea0fdad85e40&key=STREAMTAPE_API_KEY")
+    r = requests.get(f"https://api.streamtape.com/file/ul?login=79e10358ea0fdad85e40&key={STREAMTAPE_API_KEY}")
     upload_url = r.json()['result']['url']
 
     # Step 2: Upload file
