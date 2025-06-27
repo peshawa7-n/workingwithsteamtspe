@@ -12,11 +12,14 @@ CHANNEL_ID = os.getenv("CHANNEL_ID")
 # === 1. Download YouTube video ===
 def download_video():
     print("📥 Downloading video...")
-    ydl_opts = {
-        'format': 'best[ext=mp4]',
+    ydl_opts =
+    {
+        # Try to download 1080p with audio; fallback to best available
+        'format': 'bestvideo[height<=1080]+bestaudio/best',
         'outtmpl': OUTPUT_FILE,
-        'noplaylist': True
+        'merge_output_format': 'mp4',
     }
+    
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         ydl.download([VIDEO_URL])
     print("✅ Video downloaded.")
