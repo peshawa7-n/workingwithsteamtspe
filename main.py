@@ -3,7 +3,7 @@ import requests
 import yt_dlp
 
 # === Config ===
-VIDEO_URL = "https://www.youtube.com/watch?v=BaW_jenozKc"
+VIDEO_URL = "https://youtu.be/nOk-3Qije9Y?si=SSXdZgYy7Fk6Usip"
 OUTPUT_FILE = "video.mp4"
 STREAMTAPE_API_KEY = os.getenv("STREAMTAPE_API_KEY")
 BOT_TOKEN = os.getenv("BOT_TOKEN")
